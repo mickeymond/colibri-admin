@@ -1,6 +1,6 @@
 import * as React from "react";
 import {
-  Create,
+  Edit,
   SimpleForm,
   TextInput,
   SelectInput,
@@ -29,7 +29,7 @@ export const TaskEdit = (props) => {
   }, []);
 
   return (
-    <Create {...props}>
+    <Edit {...props}>
       <SimpleForm>
         <TextInput source="title" />
         <SelectInput source="category" choices={categories} />
@@ -45,6 +45,6 @@ export const TaskEdit = (props) => {
           </SimpleFormIterator>
         </ArrayInput>
       </SimpleForm>
-    </Create>
+    </Edit>
   );
 };
