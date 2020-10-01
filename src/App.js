@@ -2,13 +2,13 @@ import React from "react";
 import UserIcon from "@material-ui/icons/People";
 import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
 import AssignmentIcon from "@material-ui/icons/Assignment";
-import ReplayIcon from "@material-ui/icons/Replay";
+import ClassIcon from "@material-ui/icons/Class";
 import { Admin, Resource, ListGuesser } from "react-admin";
 import lb4Provider from "react-admin-lb4";
 
 import { QuestionCreate, QuestionEdit } from "./components/questions";
 import { TaskCreate, TaskEdit } from "./components/tasks";
-import { TestCreate, TestEdit } from "./components/tests";
+import { CategoryCreate, CategoryEdit } from "./components/categories";
 
 const dataProvider = lb4Provider("https://colibriafrica.herokuapp.com");
 
@@ -31,11 +31,11 @@ export default () => {
         edit={TaskEdit}
       />
       <Resource
-        name="tests"
-        icon={ReplayIcon}
+        name="categories"
+        icon={ClassIcon}
         list={ListGuesser}
-        create={TestCreate}
-        edit={TestEdit}
+        create={CategoryCreate}
+        edit={CategoryEdit}
       />
     </Admin>
   );
